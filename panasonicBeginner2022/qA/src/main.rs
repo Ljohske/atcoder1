@@ -1,7 +1,7 @@
 fn main() {
     let mut s = String::new();
-
     std::io::stdin().read_line(&mut s).expect("Failed readline");
+    let s: String = s.trim().parse().expect("Parsing failed!");
 
     println!("You entered {}!", s);
 
@@ -16,13 +16,4 @@ fn main() {
     }
 
     println!("{}", ansstr);
-}
-
-fn lint_str(string_to_format: &str) -> String {
-    let mut formatted_string = String::from(string_to_format);
-    let boundary: usize = formatted_string.len() - 1;
-
-    for idx in 1..boundary {
-        formatted_string
-    }
 }
